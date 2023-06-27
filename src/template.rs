@@ -578,12 +578,7 @@ impl<'s> FunctionBuilder<'s, FunctionTemplate> {
       let args = CTypeInfo::new_from_slice(overload1.args);
       let ret = CTypeInfo::new(overload1.return_type);
       let fn_info = unsafe {
-        CFunctionInfo::new(
-          args.as_ptr(),
-          overload1.args.len(),
-          ret.as_ptr(),
-          overload1.repr,
-        )
+        CFunctionInfo::new(args.as_ptr(), overload1.args.len(), ret.as_ptr())
       };
       fn_info.as_ptr()
     };
@@ -595,12 +590,7 @@ impl<'s> FunctionBuilder<'s, FunctionTemplate> {
         let args = CTypeInfo::new_from_slice(overload2.args);
         let ret = CTypeInfo::new(overload2.return_type);
         let fn_info = unsafe {
-          CFunctionInfo::new(
-            args.as_ptr(),
-            overload2.args.len(),
-            ret.as_ptr(),
-            overload2.repr,
-          )
+          CFunctionInfo::new(args.as_ptr(), overload2.args.len(), ret.as_ptr())
         };
         fn_info.as_ptr()
       }
