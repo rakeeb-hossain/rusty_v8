@@ -2,10 +2,10 @@ name: ci
 
 on:
   push:
-    branches: [main]
+    branches: [main, support-deno-v0_191]
     tags: ["**"]
   pull_request:
-    branches: [main]
+    branches: [main, support-deno-v0_191]
     types: [labeled, opened, synchronize, reopened]
 
 jobs:
