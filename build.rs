@@ -321,7 +321,7 @@ fn static_lib_url() -> String {
   let version = if false {
 	  env::var("CARGO_PKG_VERSION").unwrap()
   } else {
-	  format!("0.73.0-deno-0.191.0-support")
+	  format!("0.73.0-deno_core-support")
   };
   let target = env::var("TARGET").unwrap();
 
