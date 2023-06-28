@@ -33,23 +33,23 @@ jobs:
             target: x86_64-apple-darwin
             variant: release
 
-          - os: ${{ github.repository == 'rakeeb-hossain/rusty_v8' && 'ubuntu-22.04-xl' || 'ubuntu-22.04' }}
+          - os: 'ubuntu-22.04'
             target: x86_64-unknown-linux-gnu
             variant: debug
 
-          - os: ${{ github.repository == 'rakeeb-hossain/rusty_v8' && 'ubuntu-22.04-xl' || 'ubuntu-22.04' }}
+          - os: 'ubuntu-22.04'
             target: x86_64-unknown-linux-gnu
             variant: release
 
-          - os: ${{ github.repository == 'rakeeb-hossain/rusty_v8' && 'windows-2019-xxl' || 'windows-2019' }}
+          - os: 'windows-2019'
             target: x86_64-pc-windows-msvc
             variant: release # Note: we do not support windows debug builds.
 
-          - os: ${{ github.repository == 'rakeeb-hossain/rusty_v8' && 'ubuntu-22.04-xl' || 'ubuntu-22.04' }}
+          - os: 'ubuntu-22.04'
             target: aarch64-unknown-linux-gnu
             variant: debug
 
-          - os: ${{ github.repository == 'rakeeb-hossain/rusty_v8' && 'ubuntu-22.04-xl' || 'ubuntu-22.04' }}
+          - os: 'ubuntu-22.04'
             target: aarch64-unknown-linux-gnu
             variant: release
 
