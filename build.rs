@@ -315,13 +315,14 @@ fn static_lib_url() -> String {
   if let Ok(custom_archive) = env::var("RUSTY_V8_ARCHIVE") {
     return custom_archive;
   }
-  let default_base = "https://github.com/rakeeb-hossain/rusty_v8/releases/download";
+  let default_base =
+    "https://github.com/rakeeb-hossain/rusty_v8/releases/download";
   let base =
     env::var("RUSTY_V8_MIRROR").unwrap_or_else(|_| default_base.into());
   let version = if false {
-	  env::var("CARGO_PKG_VERSION").unwrap()
+    env::var("CARGO_PKG_VERSION").unwrap()
   } else {
-	  "0.73.0-deno_core-support".to_string()
+    "0.73.0-deno_core-support".to_string()
   };
   let target = env::var("TARGET").unwrap();
 
